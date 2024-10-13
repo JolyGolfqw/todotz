@@ -1,0 +1,83 @@
+.filterButtons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.filterButtons div {
+  display: flex;
+  gap: 5px;
+}
+
+.filterButtons button {
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.filterButtons button:disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.filterButtons button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.filterButtons .active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.filterButtons .clearButton {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filterButtons .clearButton:disabled {
+  background-color: #e0e0e0;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.filterButtons .clearButton:hover:not(:disabled) {
+  background-color: #d9363e;
+}
+
+@media (max-width: 600px) {
+  .filterButtons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterButtons div {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  .filterButtons .clearButton {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  span {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
